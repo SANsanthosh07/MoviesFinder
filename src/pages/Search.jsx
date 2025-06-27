@@ -25,9 +25,12 @@ const Search = ({ apiPath }) => {
             : `Result for ( ${queryTerm} )`}
         </h2>
 
-        <button className="text-sm sm:text-base text-black underline hover:text-blue-600 transition sm:absolute sm:right-8">
-          <Link to="/">Back To Home</Link>
-        </button>
+        <Link
+          to="/"
+          className="text-sm sm:text-base text-black underline hover:text-blue-600 transition sm:absolute sm:right-8"
+        >
+          Back To Home
+        </Link>
       </div>
 
       <div className="bg-black p-4">

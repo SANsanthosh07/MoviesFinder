@@ -4,16 +4,15 @@ import Header from "../components/Header";
 import InputFeild from "../components/InputFeild";
 import Welcome from "../components/Welcome";
 import useFetch from "../hooks/useFetch";
-import Search from "./Search";
 
-const Home = ({ apiPath }) => {
-  const { data: movies } = useFetch(apiPath);
+export const API_PATH_NOW = "movie/now_playing";
+const Home = () => {
+  const { data: movies } = useFetch(API_PATH_NOW);
 
   return (
     <>
       <Header />
       <Welcome />
-      {/* <Search /> */}
       <InputFeild />
       <div className="bg-black p-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
