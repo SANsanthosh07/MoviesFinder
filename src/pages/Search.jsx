@@ -4,11 +4,11 @@ import useFetch from "../hooks/useFetch";
 import CardCom from "../components/CardCom";
 import Header from "../components/Header";
 import Welcome from "../components/Welcome";
-
-const Search = ({ apiPath }) => {
+export const API_PATH_SEARCH = "search/movie";
+const Search = () => {
   const [searchParams] = useSearchParams();
   const queryTerm = searchParams.get("q");
-  const { data: movies } = useFetch(apiPath, queryTerm);
+  const { data: movies } = useFetch(API_PATH_SEARCH, queryTerm);
 
   useEffect(() => {
     document.title = `Search results for "${queryTerm}"`;

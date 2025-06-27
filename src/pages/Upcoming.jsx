@@ -4,9 +4,9 @@ import Footer from "../components/Footer";
 import Welcome from "../components/Welcome";
 import useFetch from "../hooks/useFetch";
 import CardCom from "../components/CardCom";
-
-const Upcoming = ({ apiPath }) => {
-  const { data: movies } = useFetch(apiPath);
+export const API_PATH_UPCOMING = "movie/upcoming";
+const Upcoming = () => {
+  const { data: movies } = useFetch(API_PATH_UPCOMING);
   return (
     <div>
       <Header />

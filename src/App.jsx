@@ -8,13 +8,10 @@ import Search from "./pages/Search";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home apiPath="movie/now_playing" />} />
-      <Route
-        path="/topmovies"
-        element={<TopMovies apiPath="movie/top_rated" />}
-      />
-      <Route path="/upcoming" element={<Upcoming apiPath="movie/upcoming" />} />
-      <Route path="/search" element={<Search apiPath="search/movie" />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/topmovies" element={<TopMovies />} />
+      <Route path="/upcoming" element={<Upcoming />} />
+      <Route path="/search" element={<Search />} />
     </Routes>
   );
 }
